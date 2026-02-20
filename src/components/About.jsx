@@ -41,11 +41,11 @@ const About = () => {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="card-glass p-4 rounded-lg">
-                <Trophy className="text-neon-cyan mb-2" size={24} />
-                <p className="text-2xl font-bold text-white">Top 2.4%</p>
-                <p className="text-gray-400 text-sm">Kaggle Ranking</p>
-              </div>
+              <a href="https://www.kaggle.com/sanepunk05" target="_blank" rel="noopener noreferrer" className="card-glass p-4 rounded-lg hover:border-neon-cyan/50 border border-transparent transition-all duration-300 group">
+                <Trophy className="text-neon-cyan mb-2 group-hover:scale-110 transition-transform" size={24} />
+                <p className="text-2xl font-bold text-white">Active Kaggler</p>
+                <p className="text-gray-400 text-sm">Check My Profile</p>
+              </a>
               <div className="card-glass p-4 rounded-lg">
                 <Award className="text-neon-cyan mb-2" size={24} />
                 <p className="text-2xl font-bold text-white">5643+</p>

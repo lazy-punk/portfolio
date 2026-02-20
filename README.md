@@ -99,7 +99,7 @@ portfolio_p2/
 
 - **GitHub**: [sanepunk](https://github.com/sanepunk)
 - **LinkedIn**: [Ojas Patil](https://www.linkedin.com/in/ojas-patil-exe/)
-- **Kaggle**: Top 2.4% Ranking
+- **Kaggle**: [Active Kaggler](https://www.kaggle.com/sanepunk05)
 - **Open Source**: Contributor to Google's Flax
 - **Education**: B.Tech in IT + Honors in Deep Learning
 
