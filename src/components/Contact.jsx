@@ -31,25 +31,25 @@ const Contact = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gradient mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-neon-blue to-neon-cyan mx-auto mb-6" />
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-2">Get In Touch</h2>
+          <p className="text-gray-400">
             Let's build intelligent systems that scale
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="md:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="name" className="block text-gray-300 mb-2 font-medium text-sm">
                   Name
                 </label>
                 <input
@@ -59,13 +59,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-secondary border border-neon-blue/30 rounded-lg focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500 transition-colors"
+                  className="w-full px-4 py-3 bg-dark-secondary/50 border border-neon-blue/20 rounded-lg focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500 transition-colors"
                   placeholder="Your Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="email" className="block text-gray-300 mb-2 font-medium text-sm">
                   Email
                 </label>
                 <input
@@ -75,13 +75,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-dark-secondary border border-neon-blue/30 rounded-lg focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500 transition-colors"
+                  className="w-full px-4 py-3 bg-dark-secondary/50 border border-neon-blue/20 rounded-lg focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500 transition-colors"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="message" className="block text-gray-300 mb-2 font-medium text-sm">
                   Message
                 </label>
                 <textarea
@@ -90,19 +90,19 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-dark-secondary border border-neon-blue/30 rounded-lg focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500 resize-none transition-colors"
+                  rows={5}
+                  className="w-full px-4 py-3 bg-dark-secondary/50 border border-neon-blue/20 rounded-lg focus:outline-none focus:border-neon-cyan text-white placeholder-gray-500 resize-none transition-colors"
                   placeholder="Your message..."
                 />
               </div>
 
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-cyan text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-cyan text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/30 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Send size={20} />
+                <Send size={18} />
                 Send Message
               </motion.button>
             </form>
@@ -110,33 +110,25 @@ const Contact = () => {
 
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-8"
+            className="md:col-span-2 space-y-4"
           >
-            <div className="card-glass p-6 rounded-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <MessageSquare className="text-neon-cyan" />
-                Let's Connect
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                I'm always interested in hearing about new opportunities, exciting projects, 
-                and innovative ideas in AI and Machine Learning. Whether you want to collaborate 
-                or just say hi, feel free to reach out!
-              </p>
-
-              <div className="space-y-4">
+            <div className="card-glass p-6 rounded-xl">
+              <h3 className="text-xl font-bold text-white mb-4">Connect With Me</h3>
+              
+              <div className="space-y-3">
                 <a
                   href="https://github.com/sanepunk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-neon-blue/5 border border-neon-blue/20 rounded-lg hover:border-neon-cyan hover:bg-neon-blue/10 transition-all duration-300"
+                  className="flex items-center gap-3 p-3 bg-neon-blue/5 border border-neon-blue/20 rounded-lg hover:border-neon-cyan hover:bg-neon-blue/10 transition-all duration-300"
                 >
-                  <Github className="text-neon-cyan" size={24} />
+                  <Github className="text-neon-cyan" size={20} />
                   <div>
-                    <p className="text-white font-semibold">GitHub</p>
-                    <p className="text-gray-400 text-sm">@sanepunk</p>
+                    <p className="text-white font-semibold text-sm">GitHub</p>
+                    <p className="text-gray-400 text-xs">@sanepunk</p>
                   </div>
                 </a>
 
@@ -144,23 +136,26 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/ojas-patil-exe/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-neon-blue/5 border border-neon-blue/20 rounded-lg hover:border-neon-cyan hover:bg-neon-blue/10 transition-all duration-300"
+                  className="flex items-center gap-3 p-3 bg-neon-blue/5 border border-neon-blue/20 rounded-lg hover:border-neon-cyan hover:bg-neon-blue/10 transition-all duration-300"
                 >
-                  <Linkedin className="text-neon-cyan" size={24} />
+                  <Linkedin className="text-neon-cyan" size={20} />
                   <div>
-                    <p className="text-white font-semibold">LinkedIn</p>
-                    <p className="text-gray-400 text-sm">Ojas Patil</p>
+                    <p className="text-white font-semibold text-sm">LinkedIn</p>
+                    <p className="text-gray-400 text-xs">Ojas Patil</p>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:patil.ojas.250202@gmail.com"
+                  className="flex items-center gap-3 p-3 bg-neon-blue/5 border border-neon-blue/20 rounded-lg hover:border-neon-cyan hover:bg-neon-blue/10 transition-all duration-300 cursor-pointer"
+                >
+                  <Mail className="text-neon-cyan" size={20} />
+                  <div>
+                    <p className="text-white font-semibold text-sm">Email</p>
+                    <p className="text-gray-400 text-xs">patil.ojas.250202@gmail.com</p>
                   </div>
                 </a>
               </div>
-            </div>
-
-            <div className="card-glass p-6 rounded-2xl text-center">
-              <Mail className="text-neon-cyan mx-auto mb-4" size={32} />
-              <p className="text-gray-400 text-sm">Preferred Contact Method</p>
-              <p className="text-white font-semibold text-lg mt-2">
-                Via LinkedIn or GitHub
-              </p>
             </div>
           </motion.div>
         </div>
@@ -171,14 +166,14 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="mt-20 pt-8 border-t border-neon-blue/20"
+        className="mt-16 pt-8 border-t border-neon-blue/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-500 text-sm mb-2">
               © 2026 Ojas Patil. Built with React, Tailwind CSS, and Framer Motion.
             </p>
-            <p className="text-neon-cyan font-semibold text-lg glow-text">
+            <p className="text-neon-cyan font-medium">
               Let's build intelligent systems that scale.
             </p>
           </div>

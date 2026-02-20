@@ -12,16 +12,16 @@ const BackgroundAnimation = () => {
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const particleCount = 100;
+    const particleCount = 50; // Reduced from 100
 
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
-        this.opacity = Math.random() * 0.5 + 0.2;
+        this.size = Math.random() * 1.5 + 0.5;
+        this.speedX = Math.random() * 0.3 - 0.15;
+        this.speedY = Math.random() * 0.3 - 0.15;
+        this.opacity = Math.random() * 0.3 + 0.1; // More subtle
       }
 
       update() {
@@ -51,11 +51,11 @@ const BackgroundAnimation = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw grid
-      ctx.strokeStyle = 'rgba(0, 243, 255, 0.05)';
+      // Draw very subtle grid
+      ctx.strokeStyle = 'rgba(0, 243, 255, 0.02)';
       ctx.lineWidth = 1;
       
-      const gridSize = 50;
+      const gridSize = 80;
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -75,16 +75,16 @@ const BackgroundAnimation = () => {
         particle.draw();
       });
 
-      // Connect nearby particles
+      // Connect nearby particles (fewer connections)
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            ctx.strokeStyle = `rgba(0, 243, 255, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 1;
+          if (distance < 150) { // Increased distance threshold
+            ctx.strokeStyle = `rgba(0, 243, 255, ${0.05 * (1 - distance / 150)})`;
+            ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
