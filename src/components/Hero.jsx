@@ -55,7 +55,7 @@ const Hero = () => {
 
             <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
               <a
-                href="mailto:ojas@example.com"
+                href="mailto:patil.ojas.250202@gmail.com"
                 className="p-3 bg-neon-blue/10 border border-neon-blue/30 rounded-lg hover:border-neon-cyan hover:bg-neon-blue/20 transition-all duration-300"
                 title="Email"
               >
@@ -80,7 +80,9 @@ const Hero = () => {
                 <Linkedin className="text-neon-cyan" size={24} />
               </a>
               <a
-                href="#contact"
+                href="/OjasPatilResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-neon-blue/10 border border-neon-blue/30 rounded-lg hover:border-neon-cyan hover:bg-neon-blue/20 transition-all duration-300"
                 title="Resume/CV"
               >
