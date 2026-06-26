@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import BackgroundAnimation from './components/BackgroundAnimation';
 import Hero from './components/Hero';
@@ -24,6 +25,7 @@ function App() {
       <Achievements />
       <Certifications />
       <Contact />
+      <Analytics />
     </div>
   );
 }
