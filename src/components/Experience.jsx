@@ -8,9 +8,19 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: 'CrestData',
+      role: 'SDE Intern',
+      period: 'March. 2026 – Present',
+      location: 'Pune, India',
+      logo: '🚀',
+      achievements: [
+        'Building Workflow Automations',
+      ],
+    },
+    {
       company: 'Yawnn',
       role: 'Founding Machine Learning Intern',
-      period: 'Jun. 2025 – Present',
+      period: 'Jun. 2025 – Sep.2025',
       location: 'Remote, India',
       logo: '🚀',
       achievements: [
@@ -87,7 +97,7 @@ const Experience = () => {
                           key={achIndex}
                           className="text-gray-300 text-sm flex items-start gap-2"
                         >
-                          <span className="text-neon-cyan mt-1">▹</span>
+                          <span className="text-neon-cyan shrink-0 leading-5">▹</span>
                           <span>{achievement}</span>
                         </li>
                       ))}

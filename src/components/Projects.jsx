@@ -20,7 +20,7 @@ const Projects = () => {
     {
       title: 'High-Performance ML Package',
       description: 'Created open-source Python package "jackofalltrades" utilizing JAX Just-In-Time (JIT) compilation and parallelization for accelerated machine learning prototyping.',
-      metrics: 'Reduced training time by 35% over scikit-learn across 10+ ML algorithms. Generated 5643 downloads on PyPI with 4.2/5.0 average rating from 45+ users',
+      metrics: 'Reduced training time by 35% over scikit-learn across 10+ ML algorithms. Generated 6973 downloads on PyPI with 4.2/5.0 average rating from 45+ users',
       tech: ['JAX', 'Python', 'JIT', 'NumPy', 'PyPI'],
       github: 'https://github.com/sanepunk/jackofalltrades',
       demo: 'https://pypi.org/project/jackofalltrades/',

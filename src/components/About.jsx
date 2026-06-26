@@ -48,7 +48,7 @@ const About = () => {
               </a>
               <div className="card-glass p-4 rounded-lg">
                 <Award className="text-neon-cyan mb-2" size={24} />
-                <p className="text-2xl font-bold text-white">5643+</p>
+                <p className="text-2xl font-bold text-white">6973+</p>
                 <p className="text-gray-400 text-sm">PyPI Downloads</p>
               </div>
               <div className="card-glass p-4 rounded-lg">
@@ -85,7 +85,7 @@ const About = () => {
                   </p>
                   <p className="text-gray-500 text-xs mb-2">Nov 2022 – Jun 2026</p>
                   <p className="text-gray-300 text-sm">
-                    GPA: <span className="text-white font-semibold">3.28/4.0</span> (8.22/10.0)
+                    GPA: <span className="text-white font-semibold">3.32/4.0</span> (8.30/10.0)
                   </p>
                 </div>
 
@@ -98,7 +98,7 @@ const About = () => {
                   </p>
                   <p className="text-gray-500 text-xs mb-2">Aug 2024 – Jun 2026</p>
                   <p className="text-gray-300 text-sm">
-                    GPA: <span className="text-neon-cyan font-semibold">3.9/4.0</span> (9.8/10.0)
+                    GPA: <span className="text-neon-cyan font-semibold">3.84/4.0</span> (9.6/10.0)
                   </p>
                 </div>
               </div>
